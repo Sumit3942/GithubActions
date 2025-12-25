@@ -1,4 +1,4 @@
-name: First CICD Pipeline
+name: Self-Hosted Runner 
 
 on: workflow_dispatch 
 
@@ -23,7 +23,7 @@ jobs:
 
     steps:
        - name: Create New File 
-         run: echo" This is File Creation Job"
+         run: echo "This is File Creation Job"
 
 
   FileDeletion:
@@ -32,6 +32,6 @@ jobs:
 
     steps:
        - name: Create New File 
-         run: echo" This is File Deletion Job"
+         run: echo "This is File Deletion Job"
 
  
