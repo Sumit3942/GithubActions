@@ -1,4 +1,4 @@
-name: First CI Pipeline
+name: First CICD Pipeline
 
 on: workflow_dispatch 
 
@@ -15,3 +15,22 @@ jobs:
 
       - name: Get current Directory 
         run: pwd
+
+
+  FileCreation:
+    runs-on: ubuntu-latest
+    needs: build 
+
+    steps:
+       - name: Create New File 
+         run: touch file.txt
+
+         
+
+  FileDeletion:
+    runs-on: ubuntu-latest
+    needs: FileCreation
+
+    steps:
+      - name: Deleting file.txt
+        run: rm file.txt
